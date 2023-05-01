@@ -1,0 +1,26 @@
+body {
+  font-family: $fontFamily;
+  font-size: $mainSize;
+  font-weight: $mainWeight;
+  line-height: $bodyLine;
+  color: $mainColor;
+}
+.container {
+  max-width: $container;
+  padding: 0px $paddingContainer;
+  margin: 0 auto;
+}
+.title {
+  line-height: $titleLh;
+  font-weight: 500;
+  font-size: calc(50px + (80 - 50) * ((100vw - 320px) / (1920 - 320)));
+}
+.text__accent {
+  color: $accentColor;
+}
+body {
+  overflow-x: hidden;
+}
+body.hidden {
+  overflow: hidden;
+}

@@ -1,0 +1,100 @@
+.experience {
+  padding-bottom: 100px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 1%;
+    top: -24%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../accets/img/decor/blur.svg');
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    right: -67%;
+    top: -11%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../accets/img/decor/blur.svg');
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &__box {
+    display: flex;
+    column-gap: 80px;
+    @media (max-width: 1200px) {
+      column-gap: 40px;
+    }
+    @media (max-width: 920px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &-left {
+    display: flex;
+    flex-direction: column;
+    gap: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
+    &__box {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      @media (max-width: 920px) {
+        justify-content: center;
+      }
+    }
+    &__title {
+    }
+    &__year {
+      line-height: 0.94;
+      color: #e23047;
+      font-size: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
+    }
+    &__bg {
+      @media (max-width: 1400px) {
+        height: 100%;
+      }
+      &-img {
+        border-radius: 30px;
+        @media (max-width: 1400px) {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &-right {
+    max-width: 779px;
+    width: 100%;
+    &__box {
+      padding-top: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
+      border-top: 2px solid #d1e5ed;
+      margin-bottom: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
+      @media (max-width: 920px) {
+        border-top: none;
+      }
+      &-title {
+        font-size: 44px;
+        line-height: 50px;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+      &-text {
+        color: #292929;
+        font-weight: 300;
+        margin-bottom: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+      }
+    }
+    &__bg {
+      &-img {
+        border-radius: 30px;
+        width: 100%;
+      }
+    }
+  }
+}

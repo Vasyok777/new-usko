@@ -1,0 +1,13 @@
+@import '/src/accets/styles/vars.scss';
+.root {
+  max-width: $container * 1.124;
+  margin: 0 auto;
+  width: 100%;
+  background: #292929;
+  border-radius: 40px;
+}
+.wrapper {
+  @media (max-width: 1820px) {
+    padding: 0 15px;
+  }
+}

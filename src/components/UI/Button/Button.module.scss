@@ -1,0 +1,18 @@
+.btn {
+  padding: 17px 30px;
+  background: linear-gradient(137.46deg, #e23047 22.6%, #9d1225 111.68%);
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  border: 1px solid rgb(226, 48, 71);
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 0.3s ease-in;
+  &:hover {
+    color: rgb(226, 48, 71);
+    background: white;
+    border: 1px solid rgb(226, 48, 71);
+  }
+}

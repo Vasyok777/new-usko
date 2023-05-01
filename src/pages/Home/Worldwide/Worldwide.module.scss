@@ -1,0 +1,113 @@
+.worldwide {
+  padding-top: calc(40px + (120 - 40) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(40px + (140 - 40) * ((100vw - 320px) / (1920 - 320)));
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
+  }
+  &__arrows {
+    display: flex;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__title {
+    color: white;
+  }
+  &__slider {
+    &-name {
+      font-weight: 500;
+      font-size: 44px;
+      line-height: 50px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+  :global .swiper-slide {
+    display: flex;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  &__slide {
+    position: relative;
+    &:first-of-type {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 35px;
+        bottom: 35px;
+        width: 1px;
+        background: #4d4d4d;
+      }
+    }
+    &:last-of-type {
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 35px;
+        bottom: 35px;
+        width: 1px;
+        background: #4d4d4d;
+      }
+    }
+    & + .worldwide__slide {
+      &::after {
+        content: '';
+        position: absolute;
+        left: -3px;
+        top: 35px;
+        bottom: 35px;
+        width: 1px;
+        background: #4d4d4d;
+      }
+      @media (max-width: 767px) {
+        &::before {
+          content: '';
+          position: absolute;
+          right: 0px;
+          top: 35px;
+          bottom: 35px;
+          width: 1px;
+          background: #4d4d4d;
+        }
+        &::after {
+          content: '';
+          left: 0px;
+        }
+      }
+    }
+  }
+}
+.swiper-button-disabled path {
+  stroke: #cccccc;
+}
+.image-swiper-button-prev,
+.image-swiper-button-next {
+  @media (max-width: 760px) {
+    width: 50px;
+  }
+}
+:global {
+  .swiper-pagination {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+      position: unset;
+    }
+  }
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    @media (max-width: 767px) {
+      position: static;
+    }
+  }
+}

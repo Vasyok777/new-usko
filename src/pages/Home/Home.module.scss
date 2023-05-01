@@ -1,0 +1,5 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(40px + (140 - 40) * ((100vw - 320px) / (1920 - 320)));
+}
